@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Kickball</title>
+    <link rel="stylesheet" href="home.css">
+  </head>
+
+  <body>
+
+        <h1>Teams:</h1>
+          <ul>
+          <% @teams.each do |team| %>
+            <li><a href="/teams/<%= team %>"> <%= team %> </a></li>
+          <% end%>
+          </ul>
+
+        <h1>Positions:</h1>
+          <ul>
+          <% @positions.each do |position| %>
+            <li><a href="/positions/<%= position %>">  <%= position %> </a></li>
+          <% end%>
+          </ul>
+
+  </body>
+
+</html>

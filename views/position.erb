@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title><%= @position_title%></title>
+    <link rel="stylesheet" href="home.css">
+  </head>
+
+  <body>
+    <h1><%= @position_title %></h1>
+    <ul>
+      <% @roster.each do |player| %>
+        <% if player["position"] == @position_title %>
+        <li> <%= player["first_name"] %> <%= player["last_name"] %> - <a href="/teams/<%= player["team"] %>"> <%=player["team"] %> </a></li>
+        <% end %>
+      <% end %>
+    </ul>
+  </body>
+
+</html>
